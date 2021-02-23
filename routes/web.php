@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/mybooks', 'BookController@index')->name('books');
+Route::get('/mybooks/create', 'BookController@create');
+Route::get('/mybooks/{id}', 'BookController@show')->name('books.show');
+
